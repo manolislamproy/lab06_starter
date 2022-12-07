@@ -1,9 +1,9 @@
         .data
 padding:
-        .space 0  # (number in bytes) modify to see mapping to different cache indices
+        .zero 0  # (number in bytes) modify to see mapping to different cache indices
 array:
         .word   1
-        .space  2048   # Large enough for all variations of the lab.
+        .zero  2048   # Large enough for all variations of the lab.
         
         .text
 main:
@@ -54,4 +54,4 @@ skip:
                 
     # exit syscall
     li     a7, 10
-    syscall
+    ecall
